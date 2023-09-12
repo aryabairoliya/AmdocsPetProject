@@ -44,6 +44,12 @@ List<Pet> l;
 			 pst.setInt(1, id);
 			 
 			count= pst.executeUpdate();
+			if(count>0) {
+				System.out.println("Deleted");
+			}
+			else {
+				System.out.println("ID does not exist");
+			}
 			
 		 }catch(Exception e) {
 			 System.out.println("error"+e.getMessage());
@@ -69,6 +75,12 @@ List<Pet> l;
 			 pst.setInt(3, petId);
 			 
 			count= pst.executeUpdate();
+			if(count>0) {
+				System.out.println("Updated");
+			}
+			else {
+				System.out.println("ID not found");
+			}
 			
 		 }catch(Exception e) {
 			 System.out.println("error"+e.getMessage());
